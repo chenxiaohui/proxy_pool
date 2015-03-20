@@ -1,11 +1,8 @@
 #!/usr/bin/python
 #coding=utf-8
 #Filename:driver.py
-#import io
+import io
 
-def check(proxy_list, conf):
-    """"""
-    pass
 def to_redis():
     """"""
     pass
@@ -14,8 +11,8 @@ def to_nginx(proxy_list, conf):
     """"""
     try:
         pass
-        lines = [(conf['file_template']%proxy).encode('utf-8') for proxy in proxy_list]
-        with open(conf['filename'], 'w') as fp:
+        lines = [conf['file_template']%proxy for proxy in proxy_list]
+        with io.open(conf['filename'], 'w', encoding='utf-8') as fp:
             fp.writelines(lines)
     except Exception , e:
         raise e
