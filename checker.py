@@ -4,7 +4,7 @@
 import urllib2
 import io
 from config import china_conf, global_conf, seg, ip_pattern
-from driver import to_nginx
+from driver import to_file
 import sys
 import datetime
 
@@ -49,7 +49,7 @@ def check(conf):
                 #print "proxy:" + proxy['proxy'] + " failed. ignore it."
                 pass
 
-        to_nginx(valid_proxy_list, conf)
+        to_file(valid_proxy_list, conf)
     except Exception , e:
         raise e
 

@@ -2,12 +2,11 @@
 #coding=utf-8
 #Filename:leetcode.py
 
-import urllib2
 import sys
 import datetime
 from checker import read
-import lxml.html.soupparser as soup
-from config import leetcode_conf
+from config import leetcode_list_conf
+from parser import parse,to_file
 
 
 #def crawl(conf):
@@ -35,17 +34,6 @@ from config import leetcode_conf
 
     #except Exception , e:
         #raise e
-def parse_proj_list(conf = leetcode_conf):
-    """"""
-    try:
-        problem_list = []
-        html = urllib2.urlopen(conf['list-url'])
-        dom = soup.fromstring(html.read())
-        items = dom.xpath(conf['list-xpath'])
-        for item in items:
-            problem_list.append(conf['list_parse_func'](item.getchildren()))
-    except Exception , e:
-        raise e
 
 if __name__ == "__main__":
     #if len(sys.argv) > 1:
@@ -53,4 +41,6 @@ if __name__ == "__main__":
     #else:
         #print "check all succ. time: " + str(datetime.datetime.now())
 
-    parse_proj_list()
+    problem_list = parse(leetcode_list_conf)
+    to_file(problem_list, leetcode_list_conf)
+    print "get problem list succeed. time: " + str(datetime.datetime.now())

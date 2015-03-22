@@ -5,7 +5,7 @@ import datetime
 from urllib2 import urlopen
 from config import china_conf, global_conf
 import lxml.html.soupparser as soupparser
-from driver import to_nginx
+from driver import to_file
 
 def get_url(url):
     """
@@ -40,7 +40,7 @@ def refresh(conf):
     """
     try:
         proxy_list = sorted(parse(conf), key=lambda item:item['speed'], reverse=conf['reverse'])
-        to_nginx(proxy_list, conf)
+        to_file(proxy_list, conf)
     except Exception , e:
         raise e
 

@@ -7,35 +7,50 @@ bar_pattern = re.compile(r'width: (\d+)%')
 ip_pattern = re.compile(r'您的IP地址: ([\d\.]*)</b>')
 
 common_conf = {
-'xpath': '//table/tbody/tr',
-'check_url':'http://www.myip.cn/',
-'timeout':10,
-'file_template':u"%(ip)s:%(port)s" + seg + u"%(location)s" + seg + u"%(speed)s" + seg + u"%(last_check)s\n",
-'reverse':False,
+    'xpath': '//table/tbody/tr',
+    'check_url':'http://www.myip.cn/',
+    'timeout':10,
+    'file_template':u"%(ip)s:%(port)s" + seg + u"%(location)s" + seg + u"%(speed)s" + seg + u"%(last_check)s\n",
+    'reverse':False,
 }
 
 china_conf = dict(common_conf, **{
-'url' : 'http://cn-proxy.com/',
-    'parse_func':lambda item : {'ip':item[0].text,
-                                'port': item[1].text,
-                                'location':item[2].text,
-                                'speed': int(bar_pattern.findall(item[3].xpath(".//strong")[0].attrib['style'])[0]),
-                                'last_check':item[4].text},
-'reverse':True,
-'filename':'china-proxy-list.txt'
+    'url' : 'http://cn-proxy.com/',
+    'parse_func':lambda item : {
+        'ip':item[0].text,
+        'port': item[1].text,
+        'location':item[2].text,
+        'speed': int(bar_pattern.findall(item[3].xpath(".//strong")[0].attrib['style'])[0]),
+        'last_check':item[4].text
+    },
+    'reverse':True,
+    'filename':'china-proxy-list.txt'
 })
 
 global_conf = dict(common_conf , **{
-'url' : 'http://cn-proxy.com/archives/218',
-    'parse_func':lambda item : {'ip':item[0].text,
-                                'port': item[1].text,
-                                'location':item[3].text,
-                                'speed': int(item[4].text.strip(u"毫秒")),
-                                'last_check': item[5].text},
-'filename':'global-proxy-list.txt'
+    'url' : 'http://cn-proxy.com/archives/218',
+    'parse_func':lambda item : {
+        'ip':item[0].text,
+        'port': item[1].text,
+        'location':item[3].text,
+        'speed': int(item[4].text.strip(u"毫秒")),
+        'last_check': item[5].text
+    },
+    'filename':'global-proxy-list.txt'
+})
+
+leetcode_conf = dict(common_conf, **{
+    'base_url': 'https://leetcode.com'
 })
 
 leetcode_list_conf = dict(common_conf, **{
     'url' : 'https://leetcode.com/problemset/algorithms/',
-    'filename':'leetcode/list.txt'
+    'filename':'leetcode/list.txt',
+    'parse_func':lambda item : {
+        'url':leetcode_conf['base_url'] + item[2].getchildren()[0].attrib['href'],
+        'title':item[2].getchildren()[0].text.strip(' '),
+        'acceptance': float(item[3].text.rstrip('%')),
+        'difficulty': item[4].text
+    },
+    'file_template':u"%(title)s" + seg + u"%(url)s" + seg + u"%(acceptance)s" + seg + u"%(difficulty)s\n",
 })
