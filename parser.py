@@ -5,18 +5,8 @@ import datetime
 from urllib2 import urlopen
 from config import china_conf, global_conf
 import lxml.html.soupparser as soupparser
-from driver import to_nginx
+from driver import to_file
 
-def get_url(url):
-    """
-    get html content from url
-    """
-    #check url
-    try:
-        data = urlopen(url)
-        return data.read()
-    except Exception , e:
-        raise e
 
 def parse(conf):
     """
@@ -24,7 +14,7 @@ def parse(conf):
     """
     try:
         result = []
-        html = get_url(conf['url'])
+        html = urlopen(conf['url'])
         dom = soupparser.fromstring(html)
         items = dom.xpath(conf['xpath'])
 
@@ -40,7 +30,7 @@ def refresh(conf):
     """
     try:
         proxy_list = sorted(parse(conf), key=lambda item:item['speed'], reverse=conf['reverse'])
-        to_nginx(proxy_list, conf)
+        to_file(proxy_list, conf)
     except Exception , e:
         raise e
 
