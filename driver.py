@@ -7,7 +7,7 @@ def to_redis():
     """"""
     pass
 
-def to_nginx(proxy_list, conf):
+def to_file(proxy_list, conf):
     """"""
     try:
         pass

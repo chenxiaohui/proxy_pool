@@ -21,7 +21,6 @@ def read(conf):
             proxy = line.strip('\n').split(seg)
             proxy_list.append({'proxy':proxy[0].strip(), 'location':proxy[1].strip(),
                                'speed':proxy[2].strip(), 'last_check':proxy[3].strip()})
-            line = fp.readline().strip("\n")
         return proxy_list
     except Exception , e:
         raise e
