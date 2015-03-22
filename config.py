@@ -35,7 +35,7 @@ global_conf = dict(common_conf , **{
 'filename':'global-proxy-list.txt'
 })
 
-leetcode_conf = {
-    'list-url' : 'https://leetcode.com/problemset/algorithms/',
-    'list-xpath':'//tbody/tr'
-}
+leetcode_list_conf = dict(common_conf, **{
+    'url' : 'https://leetcode.com/problemset/algorithms/',
+    'filename':'leetcode/list.txt'
+})

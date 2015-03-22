@@ -38,9 +38,12 @@ from config import leetcode_conf
 def parse_proj_list(conf = leetcode_conf):
     """"""
     try:
+        problem_list = []
         html = urllib2.urlopen(conf['list-url'])
         dom = soup.fromstring(html.read())
-        print dom.xpath(conf['list-xpath'])
+        items = dom.xpath(conf['list-xpath'])
+        for item in items:
+            problem_list.append(conf['list_parse_func'](item.getchildren()))
     except Exception , e:
         raise e
 
