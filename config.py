@@ -24,7 +24,7 @@ china_conf = dict(common_conf, **{
         'last_check':item[4].text
     },
     'reverse':True,
-    'filename':'/usr/local/nginx/html/china-proxy-list.txt'
+    'filename':'china-proxy-list.txt'
 })
 
 global_conf = dict(common_conf , **{
@@ -36,5 +36,5 @@ global_conf = dict(common_conf , **{
         'speed': int(item[4].text.strip(u"毫秒")),
         'last_check': item[5].text
     },
-    'filename':'/usr/local/nginx/html/global-proxy-list.txt'
+    'filename':'global-proxy-list.txt'
 })
