@@ -15,12 +15,13 @@ def read(conf):
     try:
         proxy_list = []
         with io.open(conf['filename'], 'r', encoding='utf-8') as fp:
+            lines = fp.readlines()
+
+        for line in lines:
+            proxy = line.strip('\n').split(seg)
+            proxy_list.append({'proxy':proxy[0].strip(), 'location':proxy[1].strip(),
+                               'speed':proxy[2].strip(), 'last_check':proxy[3].strip()})
             line = fp.readline().strip("\n")
-            while line:
-                proxy = line.split(seg)
-                proxy_list.append({'proxy':proxy[0].strip(), 'location':proxy[1].strip(),
-                                   'speed':proxy[2].strip(), 'last_check':proxy[3].strip()})
-                line = fp.readline().strip("\n")
         return proxy_list
     except Exception , e:
         raise e
@@ -34,8 +35,6 @@ def check(conf, verbose=False):
         proxy_list = read(conf)
         valid_proxy_list = []
         for proxy in proxy_list:
-            if verbose:
-                print proxy['proxy'], ' ', proxy['speed']
             try:
                 proxy_handler = urllib2.ProxyHandler({"http" : 'http://' + proxy['proxy']})
                 opener = urllib2.build_opener(proxy_handler).open(conf['check_url'], timeout=conf['timeout'])
@@ -45,7 +44,8 @@ def check(conf, verbose=False):
                 if (ret_ip == ip):
                     proxy.update({'ip':ip, 'port':port})
                     valid_proxy_list.append(proxy)
-                    #print "proxy:%s  valid"%proxy['proxy']
+                    if verbose:
+                        print "proxy:%s  valid"%proxy['proxy']
             except Exception , e:
                 #print "proxy:" + proxy['proxy'] + " failed. ignore it."
                 pass

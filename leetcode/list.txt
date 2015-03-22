@@ -1,69 +1,181 @@
-Number of 1 Bits    ,https://leetcode.com/problems/number-of-1-bits/,36.9      ,Easy
-Reverse Bits        ,https://leetcode.com/problems/reverse-bits/,27.2      ,Easy
-Rotate Array        ,https://leetcode.com/problems/rotate-array/,17.4      ,Easy
-Best Time to Buy and Sell Stock IV,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/,15.7      ,Hard
-Repeated DNA Sequences,https://leetcode.com/problems/repeated-dna-sequences/,18.7      ,Medium
-Reverse Words in a String II,https://leetcode.com/problems/reverse-words-in-a-string-ii/,31.3      ,Medium
-Largest Number      ,https://leetcode.com/problems/largest-number/,15.4      ,Medium
-Dungeon Game        ,https://leetcode.com/problems/dungeon-game/,17.2      ,Hard
-Binary Search Tree Iterator,https://leetcode.com/problems/binary-search-tree-iterator/,29.0      ,Medium
-Factorial Trailing Zeroes,https://leetcode.com/problems/factorial-trailing-zeroes/,27.5      ,Easy
-Excel Sheet Column Number,https://leetcode.com/problems/excel-sheet-column-number/,36.9      ,Easy
-Two Sum III - Data structure design,https://leetcode.com/problems/two-sum-iii-data-structure-design/,24.8      ,Easy
-Majority Element    ,https://leetcode.com/problems/majority-element/,34.5      ,Easy
-Excel Sheet Column Title,https://leetcode.com/problems/excel-sheet-column-title/,17.7      ,Easy
-Two Sum II - Input array is sorted,https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/,43.7      ,Medium
-Fraction to Recurring Decimal,https://leetcode.com/problems/fraction-to-recurring-decimal/,12.3      ,Medium
-Compare Version Numbers,https://leetcode.com/problems/compare-version-numbers/,14.9      ,Easy
-Maximum Gap         ,https://leetcode.com/problems/maximum-gap/,24.2      ,Hard
-Missing Ranges      ,https://leetcode.com/problems/missing-ranges/,23.6      ,Medium
-Find Peak Element   ,https://leetcode.com/problems/find-peak-element/,32.5      ,Medium
-One Edit Distance   ,https://leetcode.com/problems/one-edit-distance/,25.3      ,Medium
-Intersection of Two Linked Lists,https://leetcode.com/problems/intersection-of-two-linked-lists/,27.6      ,Easy
-Longest Substring with At Most Two Distinct Characters,https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/,29.9      ,Hard
-Read N Characters Given Read4 II - Call multiple times,https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/,21.2      ,Hard
-Read N Characters Given Read4,https://leetcode.com/problems/read-n-characters-given-read4/,29.1      ,Easy
-Binary Tree Upside Down,https://leetcode.com/problems/binary-tree-upside-down/,34.8      ,Medium
-Min Stack           ,https://leetcode.com/problems/min-stack/,16.7      ,Easy
-Find Minimum in Rotated Sorted Array II,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/,31.3      ,Hard
-Find Minimum in Rotated Sorted Array,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/,32.9      ,Medium
-Maximum Product Subarray,https://leetcode.com/problems/maximum-product-subarray/,18.8      ,Medium
-Reverse Words in a String,https://leetcode.com/problems/reverse-words-in-a-string/,14.9      ,Medium
-Evaluate Reverse Polish Notation,https://leetcode.com/problems/evaluate-reverse-polish-notation/,20.7      ,Medium
-Max Points on a Line,https://leetcode.com/problems/max-points-on-a-line/,12.1      ,Hard
-Sort List           ,https://leetcode.com/problems/sort-list/,21.5      ,Medium
-Insertion Sort List ,https://leetcode.com/problems/insertion-sort-list/,26.1      ,Medium
-LRU Cache           ,https://leetcode.com/problems/lru-cache/,14.7      ,Hard
-Binary Tree Postorder Traversal,https://leetcode.com/problems/binary-tree-postorder-traversal/,31.9      ,Hard
-Binary Tree Preorder Traversal,https://leetcode.com/problems/binary-tree-preorder-traversal/,36.2      ,Medium
-Reorder List        ,https://leetcode.com/problems/reorder-list/,20.9      ,Medium
-Linked List Cycle II,https://leetcode.com/problems/linked-list-cycle-ii/,31.3      ,Medium
-Linked List Cycle   ,https://leetcode.com/problems/linked-list-cycle/,36.4      ,Medium
-Word Break II       ,https://leetcode.com/problems/word-break-ii/,17.4      ,Hard
-Word Break          ,https://leetcode.com/problems/word-break/,22.5      ,Medium
-Copy List with Random Pointer,https://leetcode.com/problems/copy-list-with-random-pointer/,24.6      ,Hard
-Single Number II    ,https://leetcode.com/problems/single-number-ii/,34.6      ,Medium
-Single Number       ,https://leetcode.com/problems/single-number/,45.4      ,Medium
-Candy               ,https://leetcode.com/problems/candy/    ,20.1      ,Hard
-Gas Station         ,https://leetcode.com/problems/gas-station/,25.7      ,Medium
-Clone Graph         ,https://leetcode.com/problems/clone-graph/,23.7      ,Medium
-Palindrome Partitioning II,https://leetcode.com/problems/palindrome-partitioning-ii/,19.3      ,Hard
-Palindrome Partitioning,https://leetcode.com/problems/palindrome-partitioning/,26.4      ,Medium
-Surrounded Regions  ,https://leetcode.com/problems/surrounded-regions/,14.6      ,Medium
-Sum Root to Leaf Numbers,https://leetcode.com/problems/sum-root-to-leaf-numbers/,30.3      ,Medium
-Longest Consecutive Sequence,https://leetcode.com/problems/longest-consecutive-sequence/,29.1      ,Hard
-Word Ladder         ,https://leetcode.com/problems/word-ladder/,19.1      ,Medium
-Word Ladder II      ,https://leetcode.com/problems/word-ladder-ii/,12.5      ,Hard
-Valid Palindrome    ,https://leetcode.com/problems/valid-palindrome/,22.1      ,Easy
-Binary Tree Maximum Path Sum,https://leetcode.com/problems/binary-tree-maximum-path-sum/,21.1      ,Hard
-Best Time to Buy and Sell Stock III,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/,23.5      ,Hard
-Best Time to Buy and Sell Stock II,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/,37.9      ,Medium
-Best Time to Buy and Sell Stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,32.4      ,Medium
-Triangle            ,https://leetcode.com/problems/triangle/ ,27.0      ,Medium
-Pascal's Triangle II,https://leetcode.com/problems/pascals-triangle-ii/,29.7      ,Easy
-Pascal's Triangle   ,https://leetcode.com/problems/pascals-triangle/,30.4      ,Easy
-Populating Next Right Pointers in Each Node II,https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/,31.7      ,Hard
-Populating Next Right Pointers in Each Node,https://leetcode.com/problems/populating-next-right-pointers-in-each-node/,36.1      ,Medium
-Distinct Subsequences,https://leetcode.com/problems/distinct-subsequences/,25.9      ,Hard
-Flatten Binary Tree to Linked List,https://leetcode.com/problems/flatten-binary-tree-to-linked-list/,28.7      ,Medium
-Path Sum II         ,https://leetcode.com/problems/path-sum-ii/,26.7      ,Medium
+Number of 1 Bits		https://leetcode.com/problems/number-of-1-bits/		36.9		Easy
+Reverse Bits		https://leetcode.com/problems/reverse-bits/		27.2		Easy
+Rotate Array		https://leetcode.com/problems/rotate-array/		17.4		Easy
+Best Time to Buy and Sell Stock IV		https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/		15.7		Hard
+Repeated DNA Sequences		https://leetcode.com/problems/repeated-dna-sequences/		18.7		Medium
+Reverse Words in a String II		https://leetcode.com/problems/reverse-words-in-a-string-ii/		31.4		Medium
+Largest Number		https://leetcode.com/problems/largest-number/		15.4		Medium
+Dungeon Game		https://leetcode.com/problems/dungeon-game/		17.2		Hard
+Binary Search Tree Iterator		https://leetcode.com/problems/binary-search-tree-iterator/		29.0		Medium
+Factorial Trailing Zeroes		https://leetcode.com/problems/factorial-trailing-zeroes/		27.5		Easy
+Excel Sheet Column Number		https://leetcode.com/problems/excel-sheet-column-number/		36.9		Easy
+Two Sum III - Data structure design		https://leetcode.com/problems/two-sum-iii-data-structure-design/		24.8		Easy
+Majority Element		https://leetcode.com/problems/majority-element/		34.5		Easy
+Excel Sheet Column Title		https://leetcode.com/problems/excel-sheet-column-title/		17.7		Easy
+Two Sum II - Input array is sorted		https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/		43.7		Medium
+Fraction to Recurring Decimal		https://leetcode.com/problems/fraction-to-recurring-decimal/		12.3		Medium
+Compare Version Numbers		https://leetcode.com/problems/compare-version-numbers/		14.9		Easy
+Maximum Gap		https://leetcode.com/problems/maximum-gap/		24.2		Hard
+Missing Ranges		https://leetcode.com/problems/missing-ranges/		23.6		Medium
+Find Peak Element		https://leetcode.com/problems/find-peak-element/		32.5		Medium
+One Edit Distance		https://leetcode.com/problems/one-edit-distance/		25.3		Medium
+Intersection of Two Linked Lists		https://leetcode.com/problems/intersection-of-two-linked-lists/		27.6		Easy
+Longest Substring with At Most Two Distinct Characters		https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/		29.9		Hard
+Read N Characters Given Read4 II - Call multiple times		https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/		21.2		Hard
+Read N Characters Given Read4		https://leetcode.com/problems/read-n-characters-given-read4/		29.1		Easy
+Binary Tree Upside Down		https://leetcode.com/problems/binary-tree-upside-down/		34.8		Medium
+Min Stack		https://leetcode.com/problems/min-stack/		16.7		Easy
+Find Minimum in Rotated Sorted Array II		https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/		31.3		Hard
+Find Minimum in Rotated Sorted Array		https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/		32.9		Medium
+Maximum Product Subarray		https://leetcode.com/problems/maximum-product-subarray/		18.8		Medium
+Reverse Words in a String		https://leetcode.com/problems/reverse-words-in-a-string/		14.9		Medium
+Evaluate Reverse Polish Notation		https://leetcode.com/problems/evaluate-reverse-polish-notation/		20.7		Medium
+Max Points on a Line		https://leetcode.com/problems/max-points-on-a-line/		12.1		Hard
+Sort List		https://leetcode.com/problems/sort-list/		21.5		Medium
+Insertion Sort List		https://leetcode.com/problems/insertion-sort-list/		26.1		Medium
+LRU Cache		https://leetcode.com/problems/lru-cache/		14.7		Hard
+Binary Tree Postorder Traversal		https://leetcode.com/problems/binary-tree-postorder-traversal/		31.9		Hard
+Binary Tree Preorder Traversal		https://leetcode.com/problems/binary-tree-preorder-traversal/		36.2		Medium
+Reorder List		https://leetcode.com/problems/reorder-list/		20.9		Medium
+Linked List Cycle II		https://leetcode.com/problems/linked-list-cycle-ii/		31.3		Medium
+Linked List Cycle		https://leetcode.com/problems/linked-list-cycle/		36.4		Medium
+Word Break II		https://leetcode.com/problems/word-break-ii/		17.4		Hard
+Word Break		https://leetcode.com/problems/word-break/		22.5		Medium
+Copy List with Random Pointer		https://leetcode.com/problems/copy-list-with-random-pointer/		24.6		Hard
+Single Number II		https://leetcode.com/problems/single-number-ii/		34.6		Medium
+Single Number		https://leetcode.com/problems/single-number/		45.4		Medium
+Candy		https://leetcode.com/problems/candy/		20.1		Hard
+Gas Station		https://leetcode.com/problems/gas-station/		25.7		Medium
+Clone Graph		https://leetcode.com/problems/clone-graph/		23.7		Medium
+Palindrome Partitioning II		https://leetcode.com/problems/palindrome-partitioning-ii/		19.3		Hard
+Palindrome Partitioning		https://leetcode.com/problems/palindrome-partitioning/		26.4		Medium
+Surrounded Regions		https://leetcode.com/problems/surrounded-regions/		14.6		Medium
+Sum Root to Leaf Numbers		https://leetcode.com/problems/sum-root-to-leaf-numbers/		30.4		Medium
+Longest Consecutive Sequence		https://leetcode.com/problems/longest-consecutive-sequence/		29.1		Hard
+Word Ladder		https://leetcode.com/problems/word-ladder/		19.1		Medium
+Word Ladder II		https://leetcode.com/problems/word-ladder-ii/		12.5		Hard
+Valid Palindrome		https://leetcode.com/problems/valid-palindrome/		22.1		Easy
+Binary Tree Maximum Path Sum		https://leetcode.com/problems/binary-tree-maximum-path-sum/		21.1		Hard
+Best Time to Buy and Sell Stock III		https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/		23.5		Hard
+Best Time to Buy and Sell Stock II		https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/		37.9		Medium
+Best Time to Buy and Sell Stock		https://leetcode.com/problems/best-time-to-buy-and-sell-stock/		32.4		Medium
+Triangle		https://leetcode.com/problems/triangle/		27.0		Medium
+Pascal's Triangle II		https://leetcode.com/problems/pascals-triangle-ii/		29.7		Easy
+Pascal's Triangle		https://leetcode.com/problems/pascals-triangle/		30.4		Easy
+Populating Next Right Pointers in Each Node II		https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/		31.7		Hard
+Populating Next Right Pointers in Each Node		https://leetcode.com/problems/populating-next-right-pointers-in-each-node/		36.1		Medium
+Distinct Subsequences		https://leetcode.com/problems/distinct-subsequences/		25.9		Hard
+Flatten Binary Tree to Linked List		https://leetcode.com/problems/flatten-binary-tree-to-linked-list/		28.7		Medium
+Path Sum II		https://leetcode.com/problems/path-sum-ii/		26.7		Medium
+Path Sum		https://leetcode.com/problems/path-sum/		29.9		Easy
+Minimum Depth of Binary Tree		https://leetcode.com/problems/minimum-depth-of-binary-tree/		29.1		Easy
+Balanced Binary Tree		https://leetcode.com/problems/balanced-binary-tree/		32.1		Easy
+Convert Sorted List to Binary Search Tree		https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/		27.8		Medium
+Convert Sorted Array to Binary Search Tree		https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/		33.8		Medium
+Binary Tree Level Order Traversal II		https://leetcode.com/problems/binary-tree-level-order-traversal-ii/		30.8		Easy
+Construct Binary Tree from Inorder and Postorder Traversal		https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/		26.7		Medium
+Construct Binary Tree from Preorder and Inorder Traversal		https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/		26.4		Medium
+Maximum Depth of Binary Tree		https://leetcode.com/problems/maximum-depth-of-binary-tree/		45.0		Easy
+Binary Tree Zigzag Level Order Traversal		https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/		26.5		Medium
+Binary Tree Level Order Traversal		https://leetcode.com/problems/binary-tree-level-order-traversal/		29.6		Easy
+Symmetric Tree		https://leetcode.com/problems/symmetric-tree/		31.5		Easy
+Same Tree		https://leetcode.com/problems/same-tree/		42.0		Easy
+Recover Binary Search Tree		https://leetcode.com/problems/recover-binary-search-tree/		24.3		Hard
+Validate Binary Search Tree		https://leetcode.com/problems/validate-binary-search-tree/		21.5		Medium
+Interleaving String		https://leetcode.com/problems/interleaving-string/		20.4		Hard
+Unique Binary Search Trees		https://leetcode.com/problems/unique-binary-search-trees/		36.9		Medium
+Unique Binary Search Trees II		https://leetcode.com/problems/unique-binary-search-trees-ii/		27.6		Medium
+Binary Tree Inorder Traversal		https://leetcode.com/problems/binary-tree-inorder-traversal/		36.1		Medium
+Restore IP Addresses		https://leetcode.com/problems/restore-ip-addresses/		20.8		Medium
+Reverse Linked List II		https://leetcode.com/problems/reverse-linked-list-ii/		26.3		Medium
+Decode Ways		https://leetcode.com/problems/decode-ways/		16.4		Medium
+Subsets II		https://leetcode.com/problems/subsets-ii/		27.5		Medium
+Gray Code		https://leetcode.com/problems/gray-code/		32.5		Medium
+Merge Sorted Array		https://leetcode.com/problems/merge-sorted-array/		30.2		Easy
+Scramble String		https://leetcode.com/problems/scramble-string/		23.9		Hard
+Partition List		https://leetcode.com/problems/partition-list/		27.5		Medium
+Maximal Rectangle		https://leetcode.com/problems/maximal-rectangle/		21.9		Hard
+Largest Rectangle in Histogram		https://leetcode.com/problems/largest-rectangle-in-histogram/		22.4		Hard
+Remove Duplicates from Sorted List		https://leetcode.com/problems/remove-duplicates-from-sorted-list/		34.3		Easy
+Remove Duplicates from Sorted List II		https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/		24.9		Medium
+Search in Rotated Sorted Array II		https://leetcode.com/problems/search-in-rotated-sorted-array-ii/		31.6		Medium
+Remove Duplicates from Sorted Array II		https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/		30.7		Medium
+Word Search		https://leetcode.com/problems/word-search/		20.1		Medium
+Subsets		https://leetcode.com/problems/subsets/		28.2		Medium
+Combinations		https://leetcode.com/problems/combinations/		30.5		Medium
+Minimum Window Substring		https://leetcode.com/problems/minimum-window-substring/		18.6		Hard
+Sort Colors		https://leetcode.com/problems/sort-colors/		32.6		Medium
+Search a 2D Matrix		https://leetcode.com/problems/search-a-2d-matrix/		31.5		Medium
+Set Matrix Zeroes		https://leetcode.com/problems/set-matrix-zeroes/		31.4		Medium
+Edit Distance		https://leetcode.com/problems/edit-distance/		26.2		Hard
+Simplify Path		https://leetcode.com/problems/simplify-path/		20.1		Medium
+Climbing Stairs		https://leetcode.com/problems/climbing-stairs/		34.1		Easy
+Sqrt(x)		https://leetcode.com/problems/sqrtx/		23.0		Medium
+Text Justification		https://leetcode.com/problems/text-justification/		14.4		Hard
+Add Binary		https://leetcode.com/problems/add-binary/		25.0		Easy
+Plus One		https://leetcode.com/problems/plus-one/		30.9		Easy
+Valid Number		https://leetcode.com/problems/valid-number/		11.4		Hard
+Minimum Path Sum		https://leetcode.com/problems/minimum-path-sum/		31.8		Medium
+Unique Paths II		https://leetcode.com/problems/unique-paths-ii/		28.0		Medium
+Unique Paths		https://leetcode.com/problems/unique-paths/		32.7		Medium
+Rotate List		https://leetcode.com/problems/rotate-list/		21.8		Medium
+Permutation Sequence		https://leetcode.com/problems/permutation-sequence/		22.8		Medium
+Spiral Matrix II		https://leetcode.com/problems/spiral-matrix-ii/		31.6		Medium
+Length of Last Word		https://leetcode.com/problems/length-of-last-word/		28.6		Easy
+Insert Interval		https://leetcode.com/problems/insert-interval/		21.1		Hard
+Merge Intervals		https://leetcode.com/problems/merge-intervals/		22.0		Hard
+Jump Game		https://leetcode.com/problems/jump-game/		27.3		Medium
+Spiral Matrix		https://leetcode.com/problems/spiral-matrix/		20.7		Medium
+Maximum Subarray		https://leetcode.com/problems/maximum-subarray/		34.6		Medium
+N-Queens II		https://leetcode.com/problems/n-queens-ii/		35.1		Hard
+N-Queens		https://leetcode.com/problems/n-queens/		26.3		Hard
+Pow(x, n)		https://leetcode.com/problems/powx-n/		26.8		Medium
+Anagrams		https://leetcode.com/problems/anagrams/		24.3		Medium
+Rotate Image		https://leetcode.com/problems/rotate-image/		31.8		Medium
+Permutations II		https://leetcode.com/problems/permutations-ii/		25.7		Hard
+Permutations		https://leetcode.com/problems/permutations/		31.7		Medium
+Jump Game II		https://leetcode.com/problems/jump-game-ii/		24.5		Hard
+Wildcard Matching		https://leetcode.com/problems/wildcard-matching/		15.0		Hard
+Multiply Strings		https://leetcode.com/problems/multiply-strings/		20.8		Medium
+Trapping Rain Water		https://leetcode.com/problems/trapping-rain-water/		30.1		Hard
+First Missing Positive		https://leetcode.com/problems/first-missing-positive/		23.1		Hard
+Combination Sum II		https://leetcode.com/problems/combination-sum-ii/		25.1		Medium
+Combination Sum		https://leetcode.com/problems/combination-sum/		27.7		Medium
+Count and Say		https://leetcode.com/problems/count-and-say/		25.6		Easy
+Sudoku Solver		https://leetcode.com/problems/sudoku-solver/		21.4		Hard
+Valid Sudoku		https://leetcode.com/problems/valid-sudoku/		27.2		Easy
+Search Insert Position		https://leetcode.com/problems/search-insert-position/		35.5		Medium
+Search for a Range		https://leetcode.com/problems/search-for-a-range/		27.7		Medium
+Search in Rotated Sorted Array		https://leetcode.com/problems/search-in-rotated-sorted-array/		29.0		Hard
+Longest Valid Parentheses		https://leetcode.com/problems/longest-valid-parentheses/		20.5		Hard
+Next Permutation		https://leetcode.com/problems/next-permutation/		25.1		Medium
+Substring with Concatenation of All Words		https://leetcode.com/problems/substring-with-concatenation-of-all-words/		19.2		Hard
+Divide Two Integers		https://leetcode.com/problems/divide-two-integers/		15.4		Medium
+Implement strStr()		https://leetcode.com/problems/implement-strstr/		22.0		Easy
+Remove Element		https://leetcode.com/problems/remove-element/		32.4		Easy
+Remove Duplicates from Sorted Array		https://leetcode.com/problems/remove-duplicates-from-sorted-array/		31.5		Easy
+Reverse Nodes in k-Group		https://leetcode.com/problems/reverse-nodes-in-k-group/		25.3		Hard
+Swap Nodes in Pairs		https://leetcode.com/problems/swap-nodes-in-pairs/		32.5		Medium
+Merge k Sorted Lists		https://leetcode.com/problems/merge-k-sorted-lists/		21.1		Hard
+Generate Parentheses		https://leetcode.com/problems/generate-parentheses/		32.3		Medium
+Merge Two Sorted Lists		https://leetcode.com/problems/merge-two-sorted-lists/		33.0		Easy
+Valid Parentheses		https://leetcode.com/problems/valid-parentheses/		26.6		Easy
+Remove Nth Node From End of List		https://leetcode.com/problems/remove-nth-node-from-end-of-list/		27.9		Easy
+4Sum		https://leetcode.com/problems/4sum/		21.4		Medium
+Letter Combinations of a Phone Number		https://leetcode.com/problems/letter-combinations-of-a-phone-number/		26.2		Medium
+3Sum Closest		https://leetcode.com/problems/3sum-closest/		27.0		Medium
+3Sum		https://leetcode.com/problems/3sum/		16.9		Medium
+Longest Common Prefix		https://leetcode.com/problems/longest-common-prefix/		26.2		Easy
+Roman to Integer		https://leetcode.com/problems/roman-to-integer/		34.8		Easy
+Integer to Roman		https://leetcode.com/problems/integer-to-roman/		34.5		Medium
+Container With Most Water		https://leetcode.com/problems/container-with-most-water/		31.9		Medium
+Regular Expression Matching		https://leetcode.com/problems/regular-expression-matching/		20.7		Hard
+Palindrome Number		https://leetcode.com/problems/palindrome-number/		29.4		Easy
+String to Integer (atoi)		https://leetcode.com/problems/string-to-integer-atoi/		13.4		Easy
+Reverse Integer		https://leetcode.com/problems/reverse-integer/		27.8		Easy
+ZigZag Conversion		https://leetcode.com/problems/zigzag-conversion/		22.3		Easy
+Longest Palindromic Substring		https://leetcode.com/problems/longest-palindromic-substring/		20.8		Medium
+Median of Two Sorted Arrays		https://leetcode.com/problems/median-of-two-sorted-arrays/		17.8		Hard
+Longest Substring Without Repeating Characters		https://leetcode.com/problems/longest-substring-without-repeating-characters/		21.4		Medium
+Add Two Numbers		https://leetcode.com/problems/add-two-numbers/		22.4		Medium
+Two Sum		https://leetcode.com/problems/two-sum/		18.0		Medium

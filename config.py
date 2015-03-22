@@ -53,5 +53,5 @@ leetcode_list_conf = dict(common_conf, **{
         'acceptance': float(item[3].text.rstrip('%')),
         'difficulty': item[4].text
     },
-    'file_template':u"%(title)-20s" + seg + u"%(url)-40s" + seg + u"%(acceptance)-10s" + seg + u"%(difficulty)-10s\n",
+    'file_template':u"%(title)s" + seg + u"%(url)s" + seg + u"%(acceptance)s" + seg + u"%(difficulty)s\n",
 })

@@ -4,11 +4,35 @@
 
 import sys
 import datetime
-from checker import read
+#from checker import read
 from config import leetcode_list_conf
 from parser import parse,to_file
 
 
+import urllib2
+import io
+from config import china_conf, global_conf, seg, ip_pattern
+from driver import to_file
+import sys
+import datetime
+
+def get_list(conf, problem_list = None):
+    """"""
+    if not problem_list:
+        problem_list = []
+        try:
+            with io.open(conf['filename']) as fp:
+                lines = fp.readlines()
+            for line in lines:
+                item = line.strip('\n')
+                problem_list.append({
+                    'url':leetcode_conf['base_url'] + item[2].getchildren()[0].attrib['href'],
+                    'title':item[2].getchildren()[0].text.strip(' '),
+                    'acceptance': float(item[3].text.rstrip('%')),
+                    'difficulty': item[4].text
+                })
+    except Exception , e:
+        raise e
 #def crawl(conf):
     #"""
     #crawl
