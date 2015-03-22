@@ -56,13 +56,11 @@ leetcode_page_conf = dict(leetcode_conf, **{
     'xpath':'//div[@class="question-content"]',
     'dir':'leetcode/',
     'parse_func':lambda item : {
-        'subject':innertext(item[1]),
-        'note':innertext(item[2])
+        'subject':''.join([innertext(it) for it in item[:-2]]).replace('\r', ''),
     },
     'file_template':u'''/*
- * %(subject)s
- * Note: %(note)s
- */
+%(subject)s
+*/
 
 #include "common.h"
 
@@ -98,14 +96,11 @@ lintcode_page_conf = dict(lintcode_conf, **{
     'xpath':'//div[@id="problem-detail"]/div[3]',
     'dir':'lintcode/',
     'parse_func':lambda item : {
-        'subject':innertext(item[1]),
-        'note':innertext(item[3]),
-        'example':innertext(item[4])
+        'subject':''.join([innertext(it) for it in item[1:-3]]),
     },
     'file_template':u'''/*
- * %(subject)s
- * Note: %(note)s
- */
+%(subject)s
+*/
 
 #include "common.h"
 

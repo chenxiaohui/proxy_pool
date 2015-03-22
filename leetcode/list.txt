@@ -38,12 +38,12 @@ BinaryTreePostorderTraversal		https://leetcode.com/problems/binary-tree-postorde
 BinaryTreePreorderTraversal		https://leetcode.com/problems/binary-tree-preorder-traversal/		36.2		Medium
 ReorderList		https://leetcode.com/problems/reorder-list/		20.9		Medium
 LinkedListCycleII		https://leetcode.com/problems/linked-list-cycle-ii/		31.3		Medium
-LinkedListCycle		https://leetcode.com/problems/linked-list-cycle/		36.4		Medium
+LinkedListCycle		https://leetcode.com/problems/linked-list-cycle/		36.3		Medium
 WordBreakII		https://leetcode.com/problems/word-break-ii/		17.4		Hard
 WordBreak		https://leetcode.com/problems/word-break/		22.5		Medium
 CopyListwithRandomPointer		https://leetcode.com/problems/copy-list-with-random-pointer/		24.6		Hard
 SingleNumberII		https://leetcode.com/problems/single-number-ii/		34.6		Medium
-SingleNumber		https://leetcode.com/problems/single-number/		45.3		Medium
+SingleNumber		https://leetcode.com/problems/single-number/		45.4		Medium
 Candy		https://leetcode.com/problems/candy/		20.1		Hard
 GasStation		https://leetcode.com/problems/gas-station/		25.7		Medium
 CloneGraph		https://leetcode.com/problems/clone-graph/		23.7		Medium
@@ -93,7 +93,7 @@ SubsetsII		https://leetcode.com/problems/subsets-ii/		27.5		Medium
 GrayCode		https://leetcode.com/problems/gray-code/		32.5		Medium
 MergeSortedArray		https://leetcode.com/problems/merge-sorted-array/		30.2		Easy
 ScrambleString		https://leetcode.com/problems/scramble-string/		23.9		Hard
-PartitionList		https://leetcode.com/problems/partition-list/		27.5		Medium
+PartitionList		https://leetcode.com/problems/partition-list/		27.4		Medium
 MaximalRectangle		https://leetcode.com/problems/maximal-rectangle/		21.9		Hard
 LargestRectangleinHistogram		https://leetcode.com/problems/largest-rectangle-in-histogram/		22.4		Hard
 RemoveDuplicatesfromSortedList		https://leetcode.com/problems/remove-duplicates-from-sorted-list/		34.3		Easy
@@ -105,7 +105,7 @@ Subsets		https://leetcode.com/problems/subsets/		28.2		Medium
 Combinations		https://leetcode.com/problems/combinations/		30.5		Medium
 MinimumWindowSubstring		https://leetcode.com/problems/minimum-window-substring/		18.6		Hard
 SortColors		https://leetcode.com/problems/sort-colors/		32.6		Medium
-Searcha2DMatrix		https://leetcode.com/problems/search-a-2d-matrix/		31.5		Medium
+Searcha2DMatrix		https://leetcode.com/problems/search-a-2d-matrix/		31.4		Medium
 SetMatrixZeroes		https://leetcode.com/problems/set-matrix-zeroes/		31.4		Medium
 EditDistance		https://leetcode.com/problems/edit-distance/		26.2		Hard
 SimplifyPath		https://leetcode.com/problems/simplify-path/		20.1		Medium
@@ -119,7 +119,7 @@ MinimumPathSum		https://leetcode.com/problems/minimum-path-sum/		31.8		Medium
 UniquePathsII		https://leetcode.com/problems/unique-paths-ii/		28.0		Medium
 UniquePaths		https://leetcode.com/problems/unique-paths/		32.7		Medium
 RotateList		https://leetcode.com/problems/rotate-list/		21.8		Medium
-PermutationSequence		https://leetcode.com/problems/permutation-sequence/		22.8		Medium
+PermutationSequence		https://leetcode.com/problems/permutation-sequence/		22.7		Medium
 SpiralMatrixII		https://leetcode.com/problems/spiral-matrix-ii/		31.6		Medium
 LengthofLastWord		https://leetcode.com/problems/length-of-last-word/		28.6		Easy
 InsertInterval		https://leetcode.com/problems/insert-interval/		21.1		Hard
@@ -133,7 +133,7 @@ Pow(x,n)		https://leetcode.com/problems/powx-n/		26.8		Medium
 Anagrams		https://leetcode.com/problems/anagrams/		24.3		Medium
 RotateImage		https://leetcode.com/problems/rotate-image/		31.8		Medium
 PermutationsII		https://leetcode.com/problems/permutations-ii/		25.7		Hard
-Permutations		https://leetcode.com/problems/permutations/		31.7		Medium
+Permutations		https://leetcode.com/problems/permutations/		31.8		Medium
 JumpGameII		https://leetcode.com/problems/jump-game-ii/		24.5		Hard
 WildcardMatching		https://leetcode.com/problems/wildcard-matching/		15.0		Hard
 MultiplyStrings		https://leetcode.com/problems/multiply-strings/		20.8		Medium
@@ -158,7 +158,7 @@ ReverseNodesink-Group		https://leetcode.com/problems/reverse-nodes-in-k-group/		
 SwapNodesinPairs		https://leetcode.com/problems/swap-nodes-in-pairs/		32.5		Medium
 MergekSortedLists		https://leetcode.com/problems/merge-k-sorted-lists/		21.1		Hard
 GenerateParentheses		https://leetcode.com/problems/generate-parentheses/		32.3		Medium
-MergeTwoSortedLists		https://leetcode.com/problems/merge-two-sorted-lists/		33.0		Easy
+MergeTwoSortedLists		https://leetcode.com/problems/merge-two-sorted-lists/		33.1		Easy
 ValidParentheses		https://leetcode.com/problems/valid-parentheses/		26.6		Easy
 RemoveNthNodeFromEndofList		https://leetcode.com/problems/remove-nth-node-from-end-of-list/		27.9		Easy
 4Sum		https://leetcode.com/problems/4sum/		21.4		Medium
@@ -178,4 +178,4 @@ LongestPalindromicSubstring		https://leetcode.com/problems/longest-palindromic-s
 MedianofTwoSortedArrays		https://leetcode.com/problems/median-of-two-sorted-arrays/		17.8		Hard
 LongestSubstringWithoutRepeatingCharacters		https://leetcode.com/problems/longest-substring-without-repeating-characters/		21.4		Medium
 AddTwoNumbers		https://leetcode.com/problems/add-two-numbers/		22.3		Medium
-TwoSum		https://leetcode.com/problems/two-sum/		18.0		Medium
+TwoSum		https://leetcode.com/problems/two-sum/		17.9		Medium

@@ -49,8 +49,8 @@ def crawl(conf, problem_list = None):
                 item = dom.xpath(conf['xpath'])[0]
                 content = conf['parse_func'](item.getchildren())
                 content['title'] = problem['title']
-                print content
                 write_file(conf, content)
+                print problem['url']
             except Exception , e:
                 print "problem:" + problem['url'] + " failed. ignore it."
 
@@ -58,8 +58,9 @@ def crawl(conf, problem_list = None):
         raise e
 
 if __name__ == "__main__":
-    #problem_list = parse(lintcode_list_conf)
-    problem_list = get_list(lintcode_list_conf)
-    #to_file(problem_list, lintcode_list_conf)
+    problem_list = parse(lintcode_list_conf)
+    to_file(problem_list, lintcode_list_conf)
+
+    #problem_list = get_list(lintcode_list_conf)
     crawl(lintcode_page_conf, problem_list)
     print "get problem list succeed. time: " + str(datetime.datetime.now())

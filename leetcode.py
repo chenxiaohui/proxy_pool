@@ -50,14 +50,14 @@ def crawl(conf, problem_list = None):
                 print problem['url']
             except Exception , e:
                 print "problem:" + problem['url'] + " failed. ignore it."
-                pass
 
     except Exception , e:
         raise e
 
 if __name__ == "__main__":
-    #problem_list = parse(leetcode_list_conf)
-    problem_list = get_list(leetcode_list_conf)
+    problem_list = parse(leetcode_list_conf)
     to_file(problem_list, leetcode_list_conf)
+
+    #problem_list = get_list(leetcode_list_conf)
     crawl(leetcode_page_conf, problem_list)
     print "get problem list succeed. time: " + str(datetime.datetime.now())
