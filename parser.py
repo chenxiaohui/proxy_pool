@@ -26,7 +26,7 @@ def parse(conf):
         result = []
         html = get_url(conf['url'])
         dom = soupparser.fromstring(html)
-        items = dom.xpath('//table/tbody/tr')
+        items = dom.xpath(conf['xpath'])
 
         for item in items:
             result.append(conf['parse_func'](item.getchildren()))
