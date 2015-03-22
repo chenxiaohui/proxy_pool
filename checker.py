@@ -18,14 +18,14 @@ def read(conf):
             line = fp.readline().strip("\n")
             while line:
                 proxy = line.split(seg)
-                proxy_list.append({'proxy':proxy[0], 'location':proxy[1],
-                                   'speed':proxy[2], 'last_check':proxy[3]})
+                proxy_list.append({'proxy':proxy[0].strip(), 'location':proxy[1].strip(),
+                                   'speed':proxy[2].strip(), 'last_check':proxy[3].strip()})
                 line = fp.readline().strip("\n")
         return proxy_list
     except Exception , e:
         raise e
 
-def check(conf):
+def check(conf, verbose=False):
     """
     check
     """
@@ -34,7 +34,8 @@ def check(conf):
         proxy_list = read(conf)
         valid_proxy_list = []
         for proxy in proxy_list:
-            #print proxy['proxy'], ' ', proxy['speed']
+            if verbose:
+                print proxy['proxy'], ' ', proxy['speed']
             try:
                 proxy_handler = urllib2.ProxyHandler({"http" : 'http://' + proxy['proxy']})
                 opener = urllib2.build_opener(proxy_handler).open(conf['check_url'], timeout=conf['timeout'])
@@ -55,11 +56,21 @@ def check(conf):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        conf = china_conf if sys.argv[1] == 'china' else global_conf
-        check(conf)
-        print "check %s succ. time: %s" % (sys.argv[1], str(datetime.datetime.now()))
+    if '-v' in  sys.argv:
+        verbose = True
     else:
-        check(china_conf)
-        check(global_conf)
-        print "check all succ. time: " + str(datetime.datetime.now())
+        verbose = False
+
+    if 'china' in sys.argv:
+        conf = china_conf
+        check(conf, verbose)
+        print "check china succ.",
+    elif 'global' in sys.argv:
+        conf = global_conf
+        check(conf, verbose)
+        print "check global succ.",
+    else:
+        check(china_conf, verbose)
+        check(global_conf, verbose)
+        print "check all succ.",
+    print "time: " + str(datetime.datetime.now())

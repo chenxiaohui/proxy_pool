@@ -47,10 +47,11 @@ leetcode_list_conf = dict(common_conf, **{
     'url' : 'https://leetcode.com/problemset/algorithms/',
     'filename':'leetcode/list.txt',
     'parse_func':lambda item : {
+        #'status':item[0].getchildren()[0].attrib['class'],
         'url':leetcode_conf['base_url'] + item[2].getchildren()[0].attrib['href'],
         'title':item[2].getchildren()[0].text.strip(' '),
         'acceptance': float(item[3].text.rstrip('%')),
         'difficulty': item[4].text
     },
-    'file_template':u"%(title)s" + seg + u"%(url)s" + seg + u"%(acceptance)s" + seg + u"%(difficulty)s\n",
+    'file_template':u"%(title)-20s" + seg + u"%(url)-40s" + seg + u"%(acceptance)-10s" + seg + u"%(difficulty)-10s\n",
 })
