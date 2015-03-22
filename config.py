@@ -22,7 +22,7 @@ china_conf = dict(common_conf, **{
                                 'speed': int(bar_pattern.findall(item[3].xpath(".//strong")[0].attrib['style'])[0]),
                                 'last_check':item[4].text},
 'reverse':True,
-'filename':'/usr/local/nginx/html/china-proxy-list.txt'
+'filename':'china-proxy-list.txt'
 })
 
 global_conf = dict(common_conf , **{
@@ -32,5 +32,10 @@ global_conf = dict(common_conf , **{
                                 'location':item[3].text,
                                 'speed': int(item[4].text.strip(u"毫秒")),
                                 'last_check': item[5].text},
-'filename':'/usr/local/nginx/html/global-proxy-list.txt'
+'filename':'global-proxy-list.txt'
 })
+
+leetcode_conf = {
+    'list-url' : 'https://leetcode.com/problemset/algorithms/',
+    'list-xpath':'//tbody/tr'
+}
