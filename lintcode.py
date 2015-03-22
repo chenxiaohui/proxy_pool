@@ -1,13 +1,16 @@
 #!/usr/bin/python
 #coding=utf-8
-#Filename:leetcode.py
+#Filename:lintcode.py
 import lxml.html.soupparser as soupparser
 import datetime
 from urllib2 import urlopen
-from config import leetcode_list_conf,seg,leetcode_page_conf
+from config import lintcode_list_conf,seg,lintcode_page_conf
 from parser import parse,to_file
 import io
 
+def innertext(element):
+    """"""
+    return ''.join([text for text in element.itertext()])
 
 def get_list(conf):
     """"""
@@ -46,18 +49,17 @@ def crawl(conf, problem_list = None):
                 item = dom.xpath(conf['xpath'])[0]
                 content = conf['parse_func'](item.getchildren())
                 content['title'] = problem['title']
+                print content
                 write_file(conf, content)
-                print problem['url']
             except Exception , e:
                 print "problem:" + problem['url'] + " failed. ignore it."
-                pass
 
     except Exception , e:
         raise e
 
 if __name__ == "__main__":
-    #problem_list = parse(leetcode_list_conf)
-    problem_list = get_list(leetcode_list_conf)
-    to_file(problem_list, leetcode_list_conf)
-    crawl(leetcode_page_conf, problem_list)
+    #problem_list = parse(lintcode_list_conf)
+    problem_list = get_list(lintcode_list_conf)
+    #to_file(problem_list, lintcode_list_conf)
+    crawl(lintcode_page_conf, problem_list)
     print "get problem list succeed. time: " + str(datetime.datetime.now())

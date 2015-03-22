@@ -2,6 +2,14 @@
 #coding=utf-8
 #Filename:config.py
 import re
+
+def innertext(element):
+    """"""
+    return ''.join([text for text in element.itertext()])
+def clean(text):
+    """"""
+    return re.sub('[\t\ \n]','',text)
+
 seg=u"\t\t"
 bar_pattern = re.compile(r'width: (\d+)%')
 ip_pattern = re.compile(r'您的IP地址: ([\d\.]*)</b>')
@@ -40,18 +48,86 @@ global_conf = dict(common_conf , **{
 })
 
 leetcode_conf = dict(common_conf, **{
-    'base_url': 'https://leetcode.com'
+    'base_url': 'https://leetcode.com',
+    'filename':'leetcode/list.txt',
 })
 
-leetcode_list_conf = dict(common_conf, **{
+leetcode_page_conf = dict(leetcode_conf, **{
+    'xpath':'//div[@class="question-content"]',
+    'dir':'leetcode/',
+    'parse_func':lambda item : {
+        'subject':innertext(item[1]),
+        'note':innertext(item[2])
+    },
+    'file_template':u'''/*
+ * %(subject)s
+ * Note: %(note)s
+ */
+
+#include "common.h"
+
+class Solution {
+public:
+
+};
+Solution s;
+
+TEST(%(title)s, normal) {
+}
+'''
+})
+
+leetcode_list_conf = dict(leetcode_conf, **{
     'url' : 'https://leetcode.com/problemset/algorithms/',
-    'filename':'leetcode/list.txt',
     'parse_func':lambda item : {
         #'status':item[0].getchildren()[0].attrib['class'],
         'url':leetcode_conf['base_url'] + item[2].getchildren()[0].attrib['href'],
-        'title':item[2].getchildren()[0].text.strip(' '),
+        'title':clean(item[2].getchildren()[0].text),
         'acceptance': float(item[3].text.rstrip('%')),
         'difficulty': item[4].text
+    },
+    'file_template':u"%(title)s" + seg + u"%(url)s" + seg + u"%(acceptance)s" + seg + u"%(difficulty)s\n",
+})
+
+lintcode_conf = dict(common_conf, **{
+    'base_url': 'http://www.lintcode.com/en',
+    'filename':'lintcode/list.txt',
+})
+
+lintcode_page_conf = dict(lintcode_conf, **{
+    'xpath':'//div[@id="problem-detail"]/div[3]',
+    'dir':'lintcode/',
+    'parse_func':lambda item : {
+        'subject':innertext(item[1]),
+        'note':innertext(item[3]),
+        'example':innertext(item[4])
+    },
+    'file_template':u'''/*
+ * %(subject)s
+ * Note: %(note)s
+ */
+
+#include "common.h"
+
+class Solution {
+public:
+
+};
+Solution s;
+
+TEST(%(title)s, normal) {
+}
+'''
+})
+
+lintcode_list_conf = dict(lintcode_conf, **{
+    'xpath':'//div[@class="list-group list"]/a',
+    'url' : 'http://www.lintcode.com/en/daily/',
+    'parse_func':lambda item : {
+        'url':lintcode_conf['base_url'] + item[0].getparent().attrib['href'],
+        'title':clean(item[3].text),
+        'acceptance': clean(item[4].text).rstrip('%'),
+        'difficulty': clean(item[2].text)
     },
     'file_template':u"%(title)s" + seg + u"%(url)s" + seg + u"%(acceptance)s" + seg + u"%(difficulty)s\n",
 })

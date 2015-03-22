@@ -7,16 +7,6 @@ from config import china_conf, global_conf
 import lxml.html.soupparser as soupparser
 from driver import to_file
 
-def get_url(url):
-    """
-    get html content from url
-    """
-    #check url
-    try:
-        data = urlopen(url)
-        return data.read()
-    except Exception , e:
-        raise e
 
 def parse(conf):
     """
@@ -24,7 +14,7 @@ def parse(conf):
     """
     try:
         result = []
-        html = get_url(conf['url'])
+        html = urlopen(conf['url'])
         dom = soupparser.fromstring(html)
         items = dom.xpath(conf['xpath'])
 
