@@ -6,6 +6,12 @@ seg=u"\t\t"
 bar_pattern = re.compile(r'width: (\d+)%')
 ip_pattern = re.compile(r'您的IP地址: ([\d\.]*)</b>')
 
+def innertext(element):
+    """"""
+    return ''.join([text for text in element.itertext()])
+def clean(text):
+    """"""
+    return re.sub('[\t\ \n]','',text)
 common_conf = {
     'xpath': '//table/tbody/tr',
     'check_url':'http://www.myip.cn/',
