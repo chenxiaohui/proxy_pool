@@ -6,7 +6,6 @@ from urllib2 import urlopen
 from config import *
 import lxml.html.soupparser as soupparser
 from driver import to_file
-from checker import configs
 
 
 def parse(url, conf):
@@ -35,13 +34,19 @@ def refresh(conf):
             for variable in conf['variable'] :
                 proxy_list.extend(parse(conf['url'] % variable, conf))
         else:
-            proxy_list = parse(conf['url'], conf)
+            proxy_list = parse(conf)
 
         to_file(proxy_list, conf)
     except Exception , e:
         raise e
 
 if __name__ == "__main__":
-    for conf in configs:
-        refresh(conf)
+    #refresh(china_conf)
+    #refresh(global_conf)
+    #refresh(pachong_conf)
+    refresh(kuaidaili_conf)
     print "refresh succeed. time: " + str(datetime.datetime.now())
+    #html="<td><script>document.write((3064^hen)+37);</script>80</td>"
+    #dom = soupparser.fromstring(html)
+    #print dir(dom)
+
