@@ -11,7 +11,7 @@ def to_file(proxy_list, conf):
     """"""
     try:
         pass
-        lines = [conf['file_template']%proxy for proxy in proxy_list]
+        lines = [conf['file_template'] % proxy for proxy in proxy_list]
         with io.open(conf['filepath'] + conf['filename'], 'w', encoding='utf-8') as fp:
             fp.writelines(lines)
     except Exception , e:

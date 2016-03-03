@@ -13,7 +13,7 @@ def clean(text):
 
 common_conf = {
     'xpath': '//table/tbody/tr',
-    'filepath':'/usr/local/nginx/html/',
+    'filepath':'/usr/share/nginx/html/',
     'read_func':lambda proxy: {'proxy':proxy[0].strip()},
     'file_template':u"%(proxy)s\n",
 }
@@ -24,7 +24,8 @@ check_conf= dict(common_conf, **{
     'filename':'proxy-list.txt',
     'timeout':10,
     'check_url':'http://www.myip.cn/',
-    'check_func':lambda html,proxy : proxy['proxy'].split(":")[0] == ip_pattern.findall(html)[0],
+    'file_template':u"%s\n",
+    'check_func':lambda html,proxy : proxy.split(":")[0] == ip_pattern.findall(html)[0],
 })
 
 china_conf = dict(common_conf, **{
@@ -63,16 +64,18 @@ ipcn_conf = dict(common_conf , **{
     'filename':'ipcn-proxy-list.txt'
 })
 
-#pachong_conf = dict(common_conf, **{
-    #'url':'http://pachong.org/',
-    #'parse_func':lambda item : {
-        #'ip':item[1].text,
-        #'port': item[2].text_content(),
-        #'speed':item[5].text_content()
-    #},
-    #'filename':'pachong-proxy-list.txt',
-    #'file_template':u"%(ip)s:%(port)s" + seg + u"%(speed)s\n",
-#})
+pachong_conf = dict(common_conf, **{
+    'selenium':True,
+    'url':'http://pachong.org/',
+    'xpath': '//table[@class="tb"]/tbody/tr',
+    'parse_func':lambda item : {
+        'ip':item[1].text,
+        'port': (lambda x: x[x.find(';')+1:]) (item[2].text_content()),
+        'speed':clean(item[5].text_content())
+    },
+    'filename':'pachong-proxy-list.txt',
+    'file_template':u"%(ip)s:%(port)s" + seg + u"%(speed)s\n",
+})
 
 kuaidaili_conf = dict(common_conf, **{
     'url':'http://www.kuaidaili.com/proxylist/%d',
@@ -89,9 +92,10 @@ kuaidaili_conf = dict(common_conf, **{
 })
 
 kjson_conf = dict(common_conf, **{
+    'selenium':True,
     'url':'http://www.kjson.com/proxy/index/%d',
     'variable':range(1,12),
-    'xpath':'//table/tr[@class="plist tc"]',
+    'xpath':'//table/tbody/tr[@class="plist tc"]',
     'parse_func':lambda item : {
         'ip':item[0].text,
         'port': item[1].text,
@@ -128,6 +132,7 @@ cz88_other_conf = dict(cz88_conf, **{
     'filename':'cz88-other-proxy-list.txt',
     'file_template':u"%(ip)s:%(port)s" + seg + u"%(type)s" + seg + u"%(anonymous)s\n",
 })
+
 #if __name__ == '__main__':
     #conf = common_conf
     #html = ' <h2><b>IP地址: 123.134.186.159</b></h2>'

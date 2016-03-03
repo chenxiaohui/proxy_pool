@@ -16,10 +16,13 @@ def parse(url, conf):
         result = []
         html = urlopen(url)
         dom = soupparser.fromstring(html)
+        print conf['xpath']
         items = dom.xpath(conf['xpath'])
-
         for item in items:
-            result.append(conf['parse_func'](item.getchildren()))
+            try:
+                result.append(conf['parse_func'](item.getchildren()))
+            except Exception , e:
+                print str(e)
         return result
     except Exception , e:
         raise e
@@ -34,19 +37,26 @@ def refresh(conf):
             for variable in conf['variable'] :
                 proxy_list.extend(parse(conf['url'] % variable, conf))
         else:
-            proxy_list = parse(conf)
+            proxy_list = parse(conf['url'], conf)
 
+        print proxy_list
         to_file(proxy_list, conf)
     except Exception , e:
         raise e
 
 if __name__ == "__main__":
-    #refresh(china_conf)
-    #refresh(global_conf)
-    #refresh(pachong_conf)
-    refresh(kuaidaili_conf)
-    print "refresh succeed. time: " + str(datetime.datetime.now())
-    #html="<td><script>document.write((3064^hen)+37);</script>80</td>"
-    #dom = soupparser.fromstring(html)
-    #print dir(dom)
+    conf = jyhack3_conf
+    refresh(conf)
 
+    #html = urlopen('http://www.jyhack.com/article/info-152.html')
+    ##html="<td><script>document.write((3064^hen)+37);</script>80</td>"
+    #dom = soupparser.fromstring(html)
+    #items = dom.xpath('//table/tbody/tr')
+
+    #result = []
+    #for item in items:
+        #try:
+            #result.append(conf['parse_func'](item.getchildren()))
+        #except Exception , e:
+            #print str(e)
+    #print result

@@ -17,7 +17,9 @@ configs=[
     global_conf,
     kuaidaili_conf,
     cz88_conf,
-    cz88_other_conf
+    cz88_other_conf,
+    pachong_conf,
+    kjson_conf
 ]
 
 def read(conf):
@@ -43,9 +45,12 @@ class Producer(threading.Thread):
 
     def run(self):
         try:
+            proxy_set = set()
             for conf in configs:
                 for proxy in read(conf):
-                    queue.put(proxy)
+                    proxy_set.add(proxy['proxy'])
+            for proxy in proxy_set:
+                queue.put(proxy)
         except Exception , e:
             print str(e)
 
@@ -72,18 +77,18 @@ def check(proxy, verbose=False):
     """
     #for proxy in proxy_list:
     try:
-        proxy_handler = urllib2.ProxyHandler({"http" : 'http://' + proxy['proxy']})
+        proxy_handler = urllib2.ProxyHandler({"http" : 'http://' + proxy})
         opener = urllib2.build_opener(proxy_handler).open(check_conf['check_url'], timeout=check_conf['timeout'])
         html = opener.read()
         if (check_conf['check_func'](html, proxy)):
             if verbose:
-                print "proxy:%s  valid"%proxy['proxy']
+                print "proxy:%s  valid"%proxy
             return True
 
         return False
     except Exception:
         if verbose:
-            print "proxy:" + proxy['proxy'] + " failed. ignore it."
+            print "proxy:" + proxy + " failed. ignore it."
         return False
 
 
